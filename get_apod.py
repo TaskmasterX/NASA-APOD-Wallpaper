@@ -2,13 +2,21 @@ import requests
 import random
 from datetime import datetime, timedelta
 
-import nasaapi
+from dotenv import load_dotenv
+import os
+
+
+
+load_dotenv()
+api_key = os.getenv("NASA_API_KEY")
+
+API_URL = f"https://api.nasa.gov/planetary/apod?api_key={api_key}"
 
 
 
 def get_apod_image(date):
     #create the API URL with the specified date
-    API_URL_DATE = f"{nasaapi.API_URL}&date={date}"
+    API_URL_DATE = f"{API_URL}&date={date}"
 
     # Make a request to the NASA API for the specified date
     response = requests.get(API_URL_DATE)
