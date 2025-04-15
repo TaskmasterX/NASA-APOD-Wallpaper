@@ -482,7 +482,7 @@ jason.ace72@gmail.com
     def run_daily_update(self):
         self.auto_update_wallpaper()
         # Set timer again for the next day
-        self.setup_daily_timer("16:30")
+        self.setup_daily_timer("09:00")
 
 
 
@@ -507,5 +507,5 @@ if __name__ == "__main__":
     window= MainWindow()
     window.show()
     #start_daily_scheduler(window)
-    window.setup_daily_timer("16:30")
+    window.setup_daily_timer("09:00")
     sys.exit(app.exec_())
